@@ -1,0 +1,23 @@
+Compiled from "Thread.java"
+public class java.lang.Thread implements java.lang.Runnable {
+  java.lang.ThreadLocal$ThreadLocalMap threadLocals;
+  java.lang.ThreadLocal$ThreadLocalMap inheritableThreadLocals;
+  volatile java.lang.Object parkBlocker;
+  public static final int MIN_PRIORITY;
+  public static final int NORM_PRIORITY;
+  public static final int MAX_PRIORITY;
+  long threadLocalRandomSeed;
+  int threadLocalRandomProbe;
+  int threadLocalRandomSecondarySeed;
+  static void blockedOn(sun.nio.ch.Interruptible);
+  public static native java.lang.Thread currentThread();
+  public static native void yield();
+  public static native void sleep(long) throws java.lang.InterruptedException;
+  public static void sleep(long, int) throws java.lang.InterruptedException;
+  public static void onSpinWait();
+  protected java.lang.Object clone() throws java.lang.CloneNotSupportedException;
+  public java.lang.Thread();
+  public java.lang.Thread(java.lang.Runnable);
+  java.lang.Thread(java.lang.Runnable, java.security.AccessControlContext);
+  public java.lang.Thread(java.lang.ThreadGroup, java.lang.Runnable);
+  public java.lang.Thread(java.lang.String);

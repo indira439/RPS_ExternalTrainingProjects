@@ -1,0 +1,18 @@
+package com.service;
+
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class AccountService {
+	
+	@Autowired
+	public AccountRepository accountRepo;
+	
+	public String createAccount()
+	{
+		
+		return "Account created successfully";
+	}
+
+}

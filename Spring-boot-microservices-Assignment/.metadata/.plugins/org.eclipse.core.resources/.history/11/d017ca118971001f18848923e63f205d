@@ -1,0 +1,20 @@
+package com.service;
+
+import org.springframework.stereotype.Service;
+
+import com.entity.Order;
+
+@Service
+public class OrderService {
+
+	public Order getOrderById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Order placeOrder(Order order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.configuration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+
+@Configuration
+public class RedisConfiguration {
+	
+	public RedisConnectionFactory redisConnectionFactory()
+	{
+		return LettuceConnectionFactory ("localhost", "6379");
+	}
+
+}

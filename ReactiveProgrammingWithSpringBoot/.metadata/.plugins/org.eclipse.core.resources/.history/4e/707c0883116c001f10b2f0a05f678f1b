@@ -1,0 +1,17 @@
+package com;
+
+import reactor.core.publisher.Mono;
+
+public class MonoExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Mono mm = Mono.just("Hi Indu");
+		
+		mm.subscribe(data -> System.out.println(data));
+		
+
+	}
+
+}

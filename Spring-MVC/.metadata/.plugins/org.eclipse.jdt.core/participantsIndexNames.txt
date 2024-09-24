@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\Administrator\eclipse-workspace\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\439799020.index
+\SpringMVCAssignment\src\main\java
+C:\Users\Administrator\eclipse-workspace\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\988483574.index
+\SpringMVCApp\src\main\java

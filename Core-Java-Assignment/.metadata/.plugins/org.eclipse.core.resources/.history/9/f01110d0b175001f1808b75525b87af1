@@ -1,0 +1,63 @@
+package com.service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import com.bean.Product;
+
+public class ProductService {
+	
+	List<Product> productsList = new ArrayList<Product>();
+
+
+	public String addProduct(Product p) {
+		// TODO Auto-generated method stub
+		int flag = 0;
+		if(productsList.size() == 0)
+		{
+			productsList.add(p);
+			return "Product added successfully";
+		}
+		else
+		{
+			Iterator<Product> it = productsList.iterator();
+			while(it.hasNext())
+			{
+				Product pp = it.next();
+				if(pp.getPid() == p.getPid())
+				{
+					flag++;
+					break;
+				}
+			}			
+		}
+		if(flag == 0)
+		{
+			productsList.add(p);
+			return "Product added successfully";
+		}
+		else if(flag > 0)
+		{
+			flag = 0;
+			return "Product must be unique";
+		}
+		return null;
+	}
+
+	public List<Product> findAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String deleteProduct(int pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String updatetProduct(Product p1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Order;
+import com.repository.OrderRepository;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	OrderRepository orderRepo;
+
+	public Order getOrderById(int id) {
+		// TODO Auto-generated method stub
+		Optional<Order> result = orderRepo.findById(id);
+		if(result.isPresent())
+		{
+			return result.get();
+		}
+		return null;
+	}
+
+	public String placeOrder(Order order) {
+		// TODO Auto-generated method stub
+		Optional<Order> result = orderRepo.findById(order.getId());
+		if(result.isPresent())
+		{
+			return "Order id already exists";
+		}
+		else
+		{
+			orderRepo.save(order);
+			return "Order placed successfully";
+		}
+	}
+
+	public List<Order> getAllOrders() {
+		// TODO Auto-generated method stub
+		return orderRepo.findAll();
+	}
+
+}

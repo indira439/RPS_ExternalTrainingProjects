@@ -1,0 +1,40 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bean.Account;
+import com.repository.AccountRepository;
+
+
+@Service
+public class AccountService {
+	
+	@Autowired
+	public AccountRepository accountRepo;
+	
+	public String createAccount(Account acct)
+	{
+		Optional<Account> acc = accountRepo.findById(acct.getAccountId());
+		if(acc == null)
+		{
+			if(acct.getAccounBalance() > 1000)
+			{
+				accountRepo.save(acct);
+				return "Account created successfully"; 
+			}
+			else
+			{
+				return "Opening balance should be greater than 1000 rs.";
+			}
+
+		}
+		else
+		{
+			return "Account number already exists. Please try with new account number.";
+		}
+	}
+
+}

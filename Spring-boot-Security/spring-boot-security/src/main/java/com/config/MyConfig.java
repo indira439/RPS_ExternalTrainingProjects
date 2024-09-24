@@ -1,0 +1,46 @@
+package com.config;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+@Configuration
+@EnableWebSecurity
+public class MyConfig {
+	
+	@Bean
+	public UserDetailsService userDetails() {
+	
+	List<UserDetails> listOfUser =  new ArrayList<UserDetails>();
+//	listOfUser.add(User.withDefaultPasswordEncoder().username("indu").password("indu123").roles("USER_ROLE").build());
+	
+//	listOfUser.add(User.withUsername("indu").password("{noop}1234").build());
+//	listOfUser.add(User.withUsername("shiva").password("{noop}1234").build());
+//	
+//	listOfUser.add(User.withUsername("ishaan").password("{noop}1234").build());
+
+	
+	String user1EncodedPassword = encodedPassword().encode("1234");
+	System.out.println("User Password "+user1EncodedPassword);
+	listOfUser.add(User.withUsername("akash").password(user1EncodedPassword).build());
+	
+	
+	return new InMemoryUserDetailsManager(listOfUser);
+	}
+	
+	@Bean
+	public BCryptPasswordEncoder encodedPassword()
+	{
+		return new BCryptPasswordEncoder();
+	}
+	
+
+}

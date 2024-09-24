@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.spring_boot_assignment&apos; to &apos;com&apos;&#x0D;&#x0A;- Original project: &apos;spring-boot-assignment&apos;&#x0D;&#x0A;- Original element: &apos;spring-boot-assignment/src/main/java/com.spring_boot_assignment&apos;&#x0D;&#x0A;- Renamed element: &apos;spring-boot-assignment/src/main/java/com&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.spring_boot_assignment&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring_boot_assignment" name="com" qualified="false" references="true" stamp="1724345003056" textual="false" version="1.0"/>
+</session>

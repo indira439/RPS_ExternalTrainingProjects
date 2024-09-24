@@ -1,0 +1,21 @@
+package com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Students;
+import com.repository.StudentRepo;
+
+@Service
+public class StudentService {
+	
+	@Autowired
+	StudentRepo studentRepo;
+
+	public String storeStudent(Students student) {
+		// TODO Auto-generated method stub
+		studentRepo.
+		return "";
+	}
+
+}

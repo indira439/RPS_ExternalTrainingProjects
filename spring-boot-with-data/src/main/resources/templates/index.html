@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Employee Management System using Spring boot with Spring Data</h2>
+<span th:text="${msg}" style="color:red"></span>
+<h2>Add Employee</h2>
+<form th:object="${emp}"  th:action="@{/storeemployee}" method="post">
+	<label>EId</label>
+	<input type="number" th:field="*{eID}" th:readonly="${readonly}">><br/>
+	<label>EName</label>
+	<input type="text" th:field="*{eName}" th:readonly="${readonly}">><br/>
+	<label>Salary</label>
+	<input type="number" th:field="*{salary}"><br/>
+	<input type="submit" th:value="${buttonValue}" name="submitButton"/>
+	<input type="reset" value="reset"/>
+</form>
+<hr/>
+<h2>Employees Details</h2>
+<table border="1">
+	<tr>
+		<th>EId</th>
+		<th>EName</th>
+		<th>Salary</th>
+		<th>Delete</th>
+		<th>Update</th>
+	</tr>
+	<tr th:each="e:${listofemployee}">
+		<td th:text="${e.eID}"></td>
+		<td th:text="${e.eName}"></td>
+		<td th:text="${e.salary}"></td>
+		<td><a th:href="@{/deleteemployee(eID=${e.eID})}">Delete</a></td>
+		<td><a th:href="@{/updateemployee(eID=${e.eID})}">Update</a></td>
+	</tr>
+</table>
+</body>
+</html>

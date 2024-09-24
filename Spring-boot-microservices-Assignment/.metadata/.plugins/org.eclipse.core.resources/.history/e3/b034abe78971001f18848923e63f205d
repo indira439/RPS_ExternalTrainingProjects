@@ -1,0 +1,33 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Order;
+import com.repository.OrderRepository;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	OrderRepository orderRepo;
+
+	public Order getOrderById(int id) {
+		// TODO Auto-generated method stub
+		Optional<Order> result = orderRepo.fin
+		return null
+	}
+
+	public Order placeOrder(Order order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Order getAllOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

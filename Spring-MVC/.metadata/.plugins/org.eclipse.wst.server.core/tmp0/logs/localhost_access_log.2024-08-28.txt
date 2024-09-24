@@ -1,0 +1,6 @@
+127.0.0.1 - - [28/Aug/2024:12:08:48 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Aug/2024:12:08:49 +0530] "GET /SpringMVCAssignment/ HTTP/1.1" 200 264
+0:0:0:0:0:0:0:1 - - [28/Aug/2024:12:08:53 +0530] "GET /SpringMVCAssignment/Login.jsp HTTP/1.1" 200 483
+0:0:0:0:0:0:0:1 - - [28/Aug/2024:12:09:21 +0530] "POST /SpringMVCAssignment/SignIn HTTP/1.1" 200 148
+0:0:0:0:0:0:0:1 - - [28/Aug/2024:12:09:26 +0530] "GET /SpringMVCAssignment/Signup.jsp HTTP/1.1" 200 484
+0:0:0:0:0:0:0:1 - - [28/Aug/2024:12:09:53 +0530] "POST /SpringMVCAssignment/SignUp HTTP/1.1" 200 176

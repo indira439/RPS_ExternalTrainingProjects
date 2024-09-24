@@ -1,0 +1,5 @@
+	spring.application.name=spring-security-jwt-3.x
+spring.datasource.url=jdbc:mysql://localhost:3306/jwt
+spring.datasource.username=root
+spring.datasource.password=root@123
+spring.jpa.hibernate.ddl-auto=update

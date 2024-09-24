@@ -1,0 +1,24 @@
+package com.service;
+
+import java.util.List;
+
+import com.entity.ProductNew;
+
+public class ProductService {
+
+	public ProductNew getProductById(int pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ProductNew storeProduct(ProductNew product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<ProductNew> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

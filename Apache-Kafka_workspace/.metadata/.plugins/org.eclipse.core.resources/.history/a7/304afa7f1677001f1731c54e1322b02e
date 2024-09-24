@@ -1,0 +1,23 @@
+package com.userobject;
+
+import java.util.Properties;
+
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
+
+
+
+public class EmployeeProducer {
+	
+	public static void main(String[] args) {
+		
+		String topicName = "topic1";
+		
+		Properties prop = new Properties();
+		
+		prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+		prop.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+		prop.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+	}
+
+}

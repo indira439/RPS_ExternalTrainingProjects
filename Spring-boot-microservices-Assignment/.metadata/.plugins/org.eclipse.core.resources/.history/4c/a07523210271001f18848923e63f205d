@@ -1,0 +1,28 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.entity.User;
+import com.repository.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	UserRepository userRepo;
+
+	public User getUserById(int userId) {
+		// TODO Auto-generated method stub
+		Optional<User> user = userRepo.findById(userId);
+		if(user.isPresent())
+		{
+			return user.get();
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+}

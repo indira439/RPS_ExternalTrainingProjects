@@ -1,0 +1,31 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.LoginNew;
+import com.repository.LoginRepository;
+
+@Service
+public class LoginService {
+	
+	@Autowired
+	LoginRepository loginRepo;
+	
+	public String signUp(LoginNew login)
+	{
+		Optional<LoginNew> result = loginRepo.findById(login.getUsername());
+		if(result.isPresent())
+		{
+			return "Account already present";
+		}
+		else
+		{
+			loginRepo.save(login);
+			return "Account created successfully";
+		}
+	}
+
+}

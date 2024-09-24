@@ -1,0 +1,13 @@
+package com;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class SimpleController {
+	
+	public String sayHello()
+	{
+		return "me to simple Rest API";
+	}
+
+}
